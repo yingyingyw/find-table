@@ -79,3 +79,27 @@
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
+
+.nameAndTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameInput {
+  padding-top: 50px;
+}
+
+.tableNumberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.tableNumberText {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 30px;
+}
