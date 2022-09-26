@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import TextField from "@mui/material/TextField";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="lightPink">
+        <div className="coupleNamesContainer">
+          <div className="coupleNames">
+            Jie Yang
+            <br></br> and
+            <br></br> Jan-Michael Perez
+          </div>
+        </div>
+
+        <div className="smallInfoBox">
+          <div className="infoText">Saturday 1 October 2022 | Luminare</div>
+        </div>
+
+        <div className="nameAndTable">
+          <TextField id="outlined-search" label="Search field" type="search" />
+        </div>
+      </div>
     </div>
   );
 }
