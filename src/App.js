@@ -37,29 +37,20 @@ function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log( 'Name:', name); 
-
+    console.log(name.toLowerCase().replace(/\s/g,''));
     if(name.length===0){
-      setWrongName(true, (prevValue, newValue) => {
-        console.log(newValue);
-      });
+      setWrongName(true);
       return;
     }
     // You should see name in console.
     // ..code to submit form to backend here...
-    setTableNumber(-1, (prevValue, newValue) => {
-      console.log(newValue);
-    });
-    setWrongName(false, (prevValue, newValue) => {
-      console.log(newValue);
-    });
+    setTableNumber(-1);
+    setWrongName(false);
     
     data.forEach((singleHeroObject, index) => {
       Object.values(singleHeroObject).every((onlyValues, valIndex) => {
-        if (onlyValues.toLowerCase().includes(name.toLowerCase())) {
-          setTableNumber(singleHeroObject.tableNumber, (prevValue, newValue) => {
-            console.log(newValue);
-          });
+        if (onlyValues.toLowerCase().replace(/\s/g,'').includes(name.toLowerCase().replace(/\s/g,''))) {
+          setTableNumber(singleHeroObject.tableNumber);
           return;
         }
       });
@@ -69,9 +60,7 @@ function App() {
 
   useEffect(() => {
     if(tableNumber===-1){
-      setWrongName(true, (prevValue, newValue) => {
-        console.log(newValue);
-      });
+      setWrongName(true);
     }
   })
   
