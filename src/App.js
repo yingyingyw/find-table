@@ -1,11 +1,12 @@
 import "./App.css";
-import {useState} from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 
+import { useStateWithCallback } from "./useStateWithCallback";
+import { useEffect } from 'react'
 import data from './data.json';
 
 const useStyles = makeStyles((themes) => ({
@@ -29,27 +30,51 @@ const useStyles = makeStyles((themes) => ({
 
 function App() {
   const classes = useStyles();
-  const [tableNumber,setTableNumber] = useState(-1);
+  const [tableNumber,setTableNumber] = useStateWithCallback(0);
+  const [wrongName,setWrongName] = useStateWithCallback(false);
 
-  const [name, setName] = useState("");
+  const [name, setName] = useStateWithCallback("");
 
   function handleSubmit(event) {
     event.preventDefault();
     console.log( 'Name:', name); 
+
+    if(name.length===0){
+      setWrongName(true, (prevValue, newValue) => {
+        console.log(newValue);
+      });
+      return;
+    }
     // You should see name in console.
     // ..code to submit form to backend here...
+    setTableNumber(-1, (prevValue, newValue) => {
+      console.log(newValue);
+    });
+    setWrongName(false, (prevValue, newValue) => {
+      console.log(newValue);
+    });
+    
     data.forEach((singleHeroObject, index) => {
       Object.values(singleHeroObject).every((onlyValues, valIndex) => {
         if (onlyValues.toLowerCase().includes(name.toLowerCase())) {
-          setTableNumber(singleHeroObject.tableNumber);
+          setTableNumber(singleHeroObject.tableNumber, (prevValue, newValue) => {
+            console.log(newValue);
+          });
           return;
         }
       });
+      return;
     });
   }
+
+  useEffect(() => {
+    if(tableNumber===-1){
+      setWrongName(true, (prevValue, newValue) => {
+        console.log(newValue);
+      });
+    }
+  })
   
-
-
 
   return (
     <div>
@@ -68,7 +93,7 @@ function App() {
 
         <Grid className="nameAndTable">
           <form className="nameInput" onSubmit={handleSubmit}>
-            <TextField variant="filled" className={classes.root} id="name" 
+            <TextField error={wrongName} variant="filled" className={classes.root} id="name" 
             label="Input Name" type="name" style = {{width: 250}} value={name} onInput={e=>setName(e.target.value)}/>
             <Typography className={classes.divider} />
             <Grid item>
