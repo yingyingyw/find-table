@@ -1,23 +1,23 @@
 [
     {
         "name":"Ying Wang",
-        "tableNumber":1
+        "tableNumber":"1"
     },
     {
         "name":"Charlie Ding",
-        "tableNumber":2
+        "tableNumber":"2"
     },
     {
         "name":"Dominic Siu Long Guo",
-        "tableNumber":3
+        "tableNumber":"3"
     },
     {
         "name":"Marcus Wong",
-        "tableNumber":4
+        "tableNumber":"4"
     },
     {
         "name":"Zhi Cheng Ding",
-        "tableNumber":5
+        "tableNumber":"5"
     }
   
   ]

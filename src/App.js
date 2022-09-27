@@ -30,7 +30,7 @@ const useStyles = makeStyles((themes) => ({
 
 function App() {
   const classes = useStyles();
-  const [tableNumber,setTableNumber] = useStateWithCallback(0);
+  const [tableNumber,setTableNumber] = useStateWithCallback("0");
   const [wrongName,setWrongName] = useStateWithCallback(false);
 
   const [name, setName] = useStateWithCallback("");
@@ -44,7 +44,7 @@ function App() {
     }
     // You should see name in console.
     // ..code to submit form to backend here...
-    setTableNumber(-1);
+    setTableNumber("-1");
     setWrongName(false);
     
     data.forEach((singleHeroObject, index) => {
@@ -59,7 +59,7 @@ function App() {
   }
 
   useEffect(() => {
-    if(tableNumber===-1){
+    if(tableNumber==="-1"){
       setWrongName(true);
     }
   })
@@ -83,7 +83,7 @@ function App() {
         <Grid className="nameAndTable">
           <form className="nameInput" onSubmit={handleSubmit}>
             <TextField error={wrongName} variant="filled" className={classes.root} id="name" 
-            label="Input Name" type="name" style = {{width: 250}} value={name} onInput={e=>setName(e.target.value)}/>
+            label={wrongName?"Invalid Name":"Input Name"} type="name" style = {{width: 250}} value={name} onInput={e=>setName(e.target.value)}/>
             <Typography className={classes.divider} />
             <Grid item>
               <Button
@@ -96,7 +96,7 @@ function App() {
             </Grid>
           </form>
         </Grid>
-        {(tableNumber>0)?
+        {!(tableNumber==="-1") && !(tableNumber==="0") ?
         <div className="tableNumberContainer"> 
           <div className="tableNumberText">
             <div className="tableNumberHeader">
