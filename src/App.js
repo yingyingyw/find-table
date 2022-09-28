@@ -96,7 +96,7 @@ function App() {
               variant="filled"
               className={classes.root}
               id="name"
-              label={wrongName ? "Invalid Name" : "Input Name"}
+              label={wrongName ? "Invalid Name" : "Input Full Name"}
               type="name"
               style={{ width: 250 }}
               value={name}
