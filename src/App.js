@@ -59,14 +59,17 @@ function App() {
           onlyValues
             .toLowerCase()
             .replace(/\s/g, "")
-            .includes(name.toLowerCase().replace(/\s/g, ""))
+            .replace("-", "")
+            .includes(name.toLowerCase().replace(/\s/g, "").replace("-", ""))
           && onlyValues
             .toLowerCase()
             .replace(/\s/g, "")
+            .replace("-", "")
             .length===
             name
             .toLowerCase()
             .replace(/\s/g, "")
+            .replace("-", "")
             .length
         ) {
           setTableNumber(singleHeroObject.tableNumber);
