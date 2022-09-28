@@ -25,6 +25,12 @@ const useStyles = makeStyles((themes) => ({
       backgroundColor: "white",
     },
   },
+  cssLabel: {
+    color: "#7d0000",
+    "&.Mui-focused": {
+      color: "#7d0000"
+    }
+  },
 }));
 
 function App() {
@@ -95,10 +101,20 @@ function App() {
               style={{ width: 250 }}
               value={name}
               onInput={(e) => setName(e.target.value)}
+              InputLabelProps={{
+                className: classes.cssLabel,
+              }}
             />
             <Typography className={classes.divider} />
             <Grid item>
-              <Button type="submit" variant="contained" sx={{ mt: 2, mb: 2 }}>
+              <Button 
+                type="submit" 
+                variant="contained" 
+                sx={{ mt: 2, mb: 2 }} 
+                style={{
+                  backgroundColor: "rgb(144, 88, 104)"
+                }}
+              >
                 Submit
               </Button>
             </Grid>
