@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import Box from '@mui/material/Box';
 
 import { useStateWithCallback } from "./useStateWithCallback";
 import { useEffect } from "react";
@@ -59,6 +60,14 @@ function App() {
             .toLowerCase()
             .replace(/\s/g, "")
             .includes(name.toLowerCase().replace(/\s/g, ""))
+          && onlyValues
+            .toLowerCase()
+            .replace(/\s/g, "")
+            .length===
+            name
+            .toLowerCase()
+            .replace(/\s/g, "")
+            .length
         ) {
           setTableNumber(singleHeroObject.tableNumber);
           return;
@@ -107,16 +116,18 @@ function App() {
             />
             <Typography className={classes.divider} />
             <Grid item>
-              <Button 
-                type="submit" 
-                variant="contained" 
-                sx={{ mt: 2, mb: 2 }} 
-                style={{
-                  backgroundColor: "rgb(144, 88, 104)"
-                }}
-              >
-                Submit
-              </Button>
+              <Box textAlign="center">
+                <Button 
+                  type="submit" 
+                  variant="contained" 
+                  sx={{ mt: 2, mb: 2 }} 
+                  style={{
+                    backgroundColor: "rgb(144, 88, 104)"
+                  }}
+                >
+                  Submit
+                </Button>
+              </Box>
             </Grid>
           </form>
         </Grid>
