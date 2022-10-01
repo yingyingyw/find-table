@@ -1,35 +1,35 @@
 [
   {
     "name": "Jenny Lin",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Jenny Lee",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Helen Lee",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Jie Yang",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Jan-Michael Perez",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Justin Perez",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "David De Vera",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Nam Nguyen",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Shen Neng",
@@ -160,7 +160,7 @@
     "tableNumber": "5"
   },
   {
-    "name": "Charley Zhou",
+    "name": "Rick Truong",
     "tableNumber": "5"
   },
   {
@@ -180,7 +180,7 @@
     "tableNumber": "5"
   },
   {
-    "name": "Shirley Wang",
+    "name": "Liz Gu",
     "tableNumber": "5"
   },
   {
@@ -751,37 +751,37 @@
     "name": "Ying Wang",
     "tableNumber": "19"
   },
- {
+  {
     "name": "Lin Jenny",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Lee Jenny ",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Lee Helen ",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Yang Jie",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Perez Jan-Michael",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Perez Justin ",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "De Vera David",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Nguyen Nam",
-    "tableNumber": "BT"
+    "tableNumber": "Bridal Table"
   },
   {
     "name": "Neng Shen",
@@ -912,7 +912,7 @@
     "tableNumber": "5"
   },
   {
-    "name": "Zhou Charley",
+    "name": "Truong Rick",
     "tableNumber": "5"
   },
   {
@@ -932,7 +932,7 @@
     "tableNumber": "5"
   },
   {
-    "name": "Wang Shirley",
+    "name": "Gu Liz",
     "tableNumber": "5"
   },
   {
